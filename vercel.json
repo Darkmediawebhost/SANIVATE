@@ -1,9 +1,15 @@
 {
+  "buildCommand": "vite build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!assets/|.*\\.(?:ico|jpg|jpeg|png|gif|svg|css|js|webp|woff|woff2|ttf|eot|json)$).*)",
       "destination": "/index.html"
     }
   ]
 }
+
+
 
