@@ -15,7 +15,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onNavigate }) => {
       {/* Background industrial overlay */}
       <div 
         className="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none mix-blend-overlay"
-        style={{ backgroundImage: `url('/src/assets/images/hero_industrial_refinery_1792910639649.jpg')` }}
+        style={{ backgroundImage: `url('/assets/images/hero_industrial_refinery_1792910639649.jpg')` }}
       />
 
       {/* Decorative Brand Diagonal */}

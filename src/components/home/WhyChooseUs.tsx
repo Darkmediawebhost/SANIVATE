@@ -47,7 +47,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onNavigate }) => {
         <div 
           className="absolute inset-0 bg-cover bg-center pointer-events-none"
           style={{ 
-            backgroundImage: `url('/src/assets/images/why_choose_refinery_engineer_1792915875039.jpg')`,
+            backgroundImage: `url('/assets/images/why_choose_refinery_engineer_1792915875039.jpg')`,
             backgroundPosition: 'center 40%'
           }}
         />

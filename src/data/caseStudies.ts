@@ -32,7 +32,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     clientSector: "Petrochemical Refining",
     location: "Jubail Industrial City, Saudi Arabia",
     duration: "3:45 MIN",
-    thumbnail: "/src/assets/images/service_manpower_industrial_1792910639659.jpg",
+    thumbnail: "/assets/images/service_manpower_industrial_1792910639659.jpg",
     category: "workforce",
     stats: [
       { label: "Manpower Mobilized", value: "350+ Trades" },
@@ -68,7 +68,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     clientSector: "Oil & Gas Marine Terminal",
     location: "Ras Al Khair Industrial Port",
     duration: "4:15 MIN",
-    thumbnail: "/src/assets/images/service_heavy_equipment_1792910641621.jpg",
+    thumbnail: "/assets/images/service_heavy_equipment_1792910641621.jpg",
     category: "equipment",
     stats: [
       { label: "Heavy Fleet Deployed", value: "24 Units" },
@@ -104,7 +104,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     clientSector: "Remote Infrastructure",
     location: "Yanbu Industrial Basin",
     duration: "3:30 MIN",
-    thumbnail: "/src/assets/images/service_modular_camp_1792910642635.jpg",
+    thumbnail: "/assets/images/service_modular_camp_1792910642635.jpg",
     category: "camps",
     stats: [
       { label: "Camp Capacity", value: "800 Personnel" },
@@ -140,7 +140,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     clientSector: "Corrosion-Resistant Fabrication",
     location: "SANIVATE Technical Center, Jubail",
     duration: "2:50 MIN",
-    thumbnail: "/src/assets/images/service_welding_wqt_1792910643744.jpg",
+    thumbnail: "/assets/images/service_welding_wqt_1792910643744.jpg",
     category: "quality",
     stats: [
       { label: "Welders Tested", value: "120 Personnel" },

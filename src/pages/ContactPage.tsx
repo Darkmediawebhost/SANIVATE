@@ -136,7 +136,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ initialServiceId, init
       <section className="relative bg-gradient-to-b from-[#031A30] via-[#062747] to-[#041D35] text-white py-16 lg:py-20 overflow-hidden">
         <div 
           className="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none mix-blend-overlay"
-          style={{ backgroundImage: `url('/src/assets/images/hero_industrial_refinery_1792910639649.jpg')` }}
+          style={{ backgroundImage: `url('/assets/images/hero_industrial_refinery_1792910639649.jpg')` }}
         />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

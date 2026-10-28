@@ -131,7 +131,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
       <section className="relative bg-[#062747] text-white py-10 sm:py-12 lg:py-14 overflow-hidden border-b border-[#0798F2]/20">
         <div 
           className="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none mix-blend-luminosity"
-          style={{ backgroundImage: `url('/src/assets/images/hero_industrial_refinery_1792910639649.jpg')` }}
+          style={{ backgroundImage: `url('/assets/images/hero_industrial_refinery_1792910639649.jpg')` }}
         />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

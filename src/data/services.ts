@@ -19,7 +19,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Manpower Solutions",
     shortDescription: "Skilled, semi-skilled and general workforce from high categories to low categories for industrial and project requirements.",
     fullDescription: "SANIVATE delivers tailored workforce deployment designed to fulfill the demanding requirements of oil & gas refineries, petrochemical plants, fabrication yards, and construction complexes across Saudi Arabia. We provide thoroughly verified personnel with complete safety certifications, valid work permits, and trade qualifications.",
-    image: "/src/assets/images/service_manpower_industrial_1792910639659.jpg",
+    image: "/assets/images/service_manpower_industrial_1792910639659.jpg",
     iconName: "Users",
     category: "manpower",
     scope: [
@@ -49,7 +49,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Equipment Services",
     shortDescription: "Supply, rental and support for heavy equipment and machinery to keep industrial and construction operations moving.",
     fullDescription: "We supply a modern, certified fleet of industrial heavy equipment and construction machinery on short and long-term lease terms. Every machine undergoes rigorous third-party inspection, preventative maintenance schedules, and is supplied with licensed, certified operators where needed.",
-    image: "/src/assets/images/service_heavy_equipment_1792910641621.jpg",
+    image: "/assets/images/service_heavy_equipment_1792910641621.jpg",
     iconName: "Truck",
     category: "equipment",
     scope: [
@@ -79,7 +79,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Camp Setup & Facilities",
     shortDescription: "Complete camp setup with accommodation, utilities and facilities to provide comfortable, compliant living for workforce.",
     fullDescription: "SANIVATE provides complete turnkey remote workforce camp solutions, from site preparation and modular containerized housing to catering, power, water, HVAC, and facilities management. Our camp structures comply with Saudi labor standards, civil defense requirements, and municipal sanitary regulations.",
-    image: "/src/assets/images/service_modular_camp_1792910642635.jpg",
+    image: "/assets/images/service_modular_camp_1792910642635.jpg",
     iconName: "Home",
     category: "camps",
     scope: [
@@ -109,7 +109,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Industrial Materials",
     shortDescription: "Sourcing and supply of industrial materials, consumables and equipment components for project continuity.",
     fullDescription: "A trusted procurement partner for oilfield, petrochemical, and construction projects. We maintain strong supply relationships with domestic and international manufacturers to provide certified pipes, valves, structural steel, electrical supplies, and daily industrial consumables with complete mill test certificates.",
-    image: "/src/assets/images/service_industrial_materials_1792910642661.jpg",
+    image: "/assets/images/service_industrial_materials_1792910642661.jpg",
     iconName: "Layers",
     category: "materials",
     scope: [
@@ -139,7 +139,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Scrap Management",
     shortDescription: "Responsible collection, handling and disposal of industrial scrap with full environmental compliance.",
     fullDescription: "We provide comprehensive industrial metal and non-metal scrap management services for manufacturing plants, refineries, and demolition sites. Operating with licensed transport and heavy handling machinery, we ensure systematic sorting, hazardous material segregation, environmental reporting, and maximum recycling value recovery.",
-    image: "/src/assets/images/service_scrap_management_1792910673656.jpg",
+    image: "/assets/images/service_scrap_management_1792910673656.jpg",
     iconName: "Recycle",
     category: "scrap",
     scope: [
@@ -169,7 +169,7 @@ export const SERVICES: ServiceItem[] = [
     title: "WQT Services",
     shortDescription: "Workforce Qualification & Training (WQT) support services for certified welding, inspection and safety.",
     fullDescription: "SANIVATE provides dedicated Welder Qualification Testing (WQT) and technical workforce qualification support. We assist EPC contractors and industrial clients in preparing, testing, and qualifying welders and specialized trades to international codes (ASME Section IX, AWS D1.1, API 1104) and client-specific engineering standards.",
-    image: "/src/assets/images/service_welding_wqt_1792910643744.jpg",
+    image: "/assets/images/service_welding_wqt_1792910643744.jpg",
     iconName: "CheckCircle2",
     category: "wqt",
     scope: [
