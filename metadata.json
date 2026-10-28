@@ -1,0 +1,6 @@
+{
+  "name": "SANIVATE - Industrial Services & Solutions",
+  "description": "Official corporate website for SANIVATE, leading provider of manpower, equipment services, camp setup, industrial materials, scrap management and WQT support in Saudi Arabia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

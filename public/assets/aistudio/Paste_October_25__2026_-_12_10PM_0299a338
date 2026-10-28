@@ -1,0 +1,595 @@
+import pypandoc, os
+
+content = r"""# SANIVATE Website — End-to-End Master Prompt
+
+Use this prompt in your AI coding assistant or development agent to build the complete SANIVATE website. Upload the official SANIVATE logo and the provided full-page website reference image alongside this prompt before starting.
+
+---
+
+## MASTER PROMPT
+
+Act as a **senior UI/UX designer, creative director, Next.js architect, frontend engineer, motion designer, accessibility specialist, and performance engineer**. Design and build a complete, production-quality corporate website for **SANIVATE**, an industrial services and support company.
+
+Do not create a generic template. Closely follow the supplied SANIVATE reference screenshot for its overall visual direction, layout rhythm, color palette, imagery style, service-card design, typography, and premium industrial look, while improving spacing, clarity, responsiveness, accessibility, and usability. Use the uploaded SANIVATE logo as the official brand asset. Do not redraw, distort, recolor, crop, or replace it unless an approved alternate logo is provided.
+
+The result must feel like an established industrial solutions company serving clients in Saudi Arabia: confident, modern, dependable, safety-focused, and professional.
+
+## 1. Required technology
+
+Use the following stack:
+
+- **Next.js** with the App Router and TypeScript.
+- **React** components with strict TypeScript typing.
+- **Tailwind CSS** for styling and responsive design.
+- **Framer Motion** (`framer-motion`) for purposeful, smooth animations.
+- **Turbopack** for local development when supported by the installed Next.js version.
+- `next/image` for optimized local images and image sizing.
+- `next/font` for optimized typography.
+- Lucide React for consistent icons.
+- ESLint and the project’s standard formatting/type-check tools.
+
+Use the current stable versions compatible with one another at implementation time. Check the installed Next.js version before choosing configuration options. Do not add obsolete or incompatible configuration. Turbopack is a development bundler option, not a replacement for Next.js or Tailwind CSS.
+
+Suggested setup commands (adapt to the current stable Next.js CLI and package scripts):
+
+```bash
+npx create-next-app@latest sanivate-website --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"
+cd sanivate-website
+npm install framer-motion lucide-react
+npm run dev
+```
+
+Use the development command supported by the installed Next.js version to enable Turbopack. Keep the `dev`, `build`, `start`, and `lint` scripts valid for the installed version.
+
+## 2. Brand and visual direction
+
+### Color palette
+
+Use the same overall look as the reference image:
+
+- Primary blue: `#0798F2` or a visually matching bright SANIVATE blue.
+- Deep navy: `#062747`.
+- Darker navy: `#031A30`.
+- White: `#FFFFFF`.
+- Very light blue background: `#F1F8FD`.
+- Soft neutral gray: `#64748B`.
+- Borders: `#E4EDF5`.
+
+Create reusable CSS variables or Tailwind theme tokens for these colors. Check the uploaded logo and tune the blue to match it. Keep contrast accessible; avoid using light blue for small text on white.
+
+### Typography
+
+- Use a modern, legible sans-serif such as Inter, Manrope, or a similar font via `next/font`.
+- Large, bold headings with compact line-height.
+- Use blue to emphasize a few important words in major headings.
+- Body text should be comfortably readable on mobile and desktop.
+- Use small uppercase, letter-spaced eyebrow labels above section headings.
+- Maintain a consistent type scale, line length, and spacing system.
+
+### Design language
+
+- Premium industrial corporate style; white/light sections balanced with deep-navy sections.
+- Realistic photography of industrial facilities, oil and gas plants, equipment, site camps, industrial materials, and workers wearing proper PPE.
+- Blue geometric diagonal shapes and subtle gradients inspired by the reference screenshot.
+- Rounded cards, thin borders, restrained shadows, clean grids, and generous whitespace.
+- Consistent icon sizes and button heights.
+- Use a clear visual hierarchy, not excessive decorative elements.
+- Do not use emojis as UI icons.
+- Avoid overusing glassmorphism, gradients, huge rounded pills, or animations.
+- Do not invent client logos, certifications, testimonials, awards, project results, or business statistics. Use only confirmed information or clearly labelled editable placeholders.
+
+## 3. Official pages and navigation
+
+Build exactly these **four main pages**:
+
+1. `/` — Home
+2. `/about` — About Us
+3. `/services` — Our Services
+4. `/contact` — Contact Us
+
+Use a shared, reusable site header and footer across all pages. The navigation should contain **Home, About Us, Our Services, Contact Us** and a prominent **Request a Quote** button. The quote button should lead to the contact page or focus/scroll to the quote form.
+
+Use the same header/footer layout, colors, type system, spacing, and interaction patterns on every page. Provide clear active navigation states and a mobile menu that opens, closes, and works with keyboard input.
+
+Do not create dead links. Every visible navigation item and CTA must lead somewhere meaningful.
+
+## 4. Header
+
+Build a polished responsive header:
+
+- Official SANIVATE logo on the left.
+- Desktop navigation on the right.
+- Bright-blue “Request a Quote” CTA with a right-arrow icon.
+- White or subtly translucent background with a fine bottom border.
+- Sticky behavior only if it improves usability; ensure it does not cover anchor targets.
+- On scroll, optionally use a restrained background/shadow transition.
+- On mobile, show the logo and an accessible menu toggle.
+- The mobile drawer/menu must close after navigation and when Escape is pressed.
+- Use semantic links and visible keyboard focus indicators.
+
+## 5. Home page — full content and layout
+
+Create the homepage to closely match the supplied reference screenshot’s structure and industrial visual identity.
+
+### A. Hero section
+
+Use a two-column or carefully art-directed split layout on desktop, and a readable stacked layout on mobile.
+
+Left content:
+
+Eyebrow:
+`MANPOWER | EQUIPMENT | MATERIALS | SOLUTIONS`
+
+Main heading:
+`Reliable Solutions for a Stronger Tomorrow`
+
+Highlight “Stronger” or another key phrase in SANIVATE blue.
+
+Supporting text:
+`SANIVATE provides manpower, equipment services, camp setup, industrial materials, scrap management and WQT support for projects across Saudi Arabia and beyond.`
+
+Primary button: `Our Services`
+Secondary button: `Request a Quote`
+
+Include a compact row of three or four trust/value items, for example:
+
+- Safe Operations
+- Reliable Workforce
+- Quality Services
+- On-Time Delivery
+
+Right side:
+
+- Large, realistic industrial refinery or plant photograph.
+- One or two industrial professionals in appropriate PPE, ideally photographed from behind or in a natural working pose.
+- Use subtle diagonal blue/white geometric overlays inspired by the reference.
+- Add an optional small floating card reading `Reliable Industrial Solutions`, but do not obscure the main subject or interfere with mobile usability.
+
+Use authentic-looking photography and appropriate image crops. Do not use fake brand text generated inside photos. The official logo should be placed as a real website asset, not baked into generated photography.
+
+### B. Services overview
+
+Eyebrow: `OUR SERVICES`
+
+Heading: `Comprehensive Industrial Support Services`
+
+Supporting paragraph:
+`We deliver practical industrial support to help projects run safely, efficiently and reliably.`
+
+Show six service cards in a responsive grid. Each card should include a realistic relevant image, consistent icon, title, short description, and arrow/link interaction.
+
+**Required services:**
+
+1. **Manpower Supply**  
+   `Skilled, semi-skilled and general workforce solutions for industrial and project requirements, from specialist roles to general and entry-level categories.`
+
+2. **Equipment Services**  
+   `Equipment supply, rental and support to help keep industrial and construction operations moving.`
+
+3. **Camp Setup & Facilities**  
+   `Workforce camp setup, accommodation, facilities and supporting site services.`
+
+4. **Industrial Materials**  
+   `Sourcing and supply of industrial materials, consumables, components and project essentials.`
+
+5. **Scrap Management**  
+   `Responsible scrap collection, handling, segregation and disposal support.`
+
+6. **WQT Services**  
+   `Dedicated WQT-related support services. Confirm the full meaning, scope and exact service description with the business owner before publishing technical claims.`
+
+Each card must link to the relevant service section or service detail area on `/services`. Use one shared data array for service content so titles and links stay consistent across the site.
+
+### C. Why choose SANIVATE
+
+Use a dark navy background with an industrial photo or subtle image treatment.
+
+Heading:
+`Your Trusted Partner in Industrial Growth`
+
+Supporting text:
+`We focus on dependable service, safe working practices, responsive support and practical solutions tailored to project needs.`
+
+Feature points:
+
+- Safety First
+- Experienced Workforce
+- Quality Standards
+- Reliable Delivery
+
+Use these as service commitments, not unverified certifications. Do not claim specific accreditation unless supplied by the business.
+
+Add a `Learn More About Us` CTA linking to `/about`.
+
+### D. Industries we serve
+
+Eyebrow: `INDUSTRIES WE SERVE`
+
+Heading:
+`Supporting Key Industries`
+
+Use image cards for relevant sectors such as:
+
+- Oil & Gas
+- Construction
+- Petrochemical
+- Industrial & Manufacturing
+
+Do not claim a confirmed client relationship or a completed project without evidence. These cards may describe target sectors rather than past clients.
+
+### E. How we work
+
+Heading:
+`Simple. Efficient. Reliable.`
+
+Use a clean four-step horizontal process on desktop and stacked process cards on mobile:
+
+1. `Understand Your Needs` — Review the project requirements.
+2. `Plan & Prepare` — Identify suitable services and resources.
+3. `Deliver the Solution` — Coordinate work with safety and quality in mind.
+4. `Ongoing Support` — Maintain communication and address project needs.
+
+Use simple numbered steps, icons, and subtle connector lines. Do not use motion that makes the process difficult to read.
+
+### F. Project showcase (optional until real projects are supplied)
+
+Heading:
+`Industrial Support in Action`
+
+If no approved project photographs or case studies are provided, present this as a general capabilities/gallery section instead of claiming these are completed SANIVATE projects. Use relevant industrial photos with neutral captions such as:
+
+- Workforce Support
+- Equipment & Site Operations
+- Camp Facilities
+
+Do not invent client names, project values, locations, or outcomes.
+
+### G. Client logos (only if verified)
+
+Only include client logos if the business owner supplies approved assets and confirms permission to use them. Otherwise omit the logo strip or replace it with a simple statement such as `Supporting Industrial Project Requirements` without implying endorsements.
+
+### H. Final call-to-action
+
+Use a high-contrast navy section with a real industrial background image and overlay.
+
+Heading:
+`Ready to Start Your Next Project?`
+
+Supporting text:
+`Tell us what your project needs. Our team will help you explore the right manpower, equipment, materials and site-support options.`
+
+Button: `Request a Quote`
+
+### I. Footer
+
+Include:
+
+- Official SANIVATE logo.
+- Short company description.
+- Quick links: Home, About Us, Our Services, Contact Us.
+- All six service links.
+- Contact details only when verified by the business owner.
+- Social links only when actual profile URLs are supplied.
+- Privacy Policy and Terms links only if those pages exist or are intentionally provided.
+- Copyright year generated dynamically.
+
+Do not publish placeholder phone numbers, addresses, email addresses, business hours, or social links as real company details. If details are missing, make them clearly configurable in one central file.
+
+## 6. About Us page — `/about`
+
+Build a complete About page using the same visual design system.
+
+Include:
+
+1. Page hero with industrial photography and heading `Building a Safer, Stronger Tomorrow`.
+2. Company introduction explaining SANIVATE’s industrial support offering without inventing founding dates, size, or history.
+3. Mission and vision statements as editable draft copy for business approval.
+4. Core values: Safety, Reliability, Quality, Responsiveness.
+5. Capabilities overview covering manpower, equipment, camps, materials, scrap and WQT.
+6. A visual section about the company’s approach to industrial support.
+7. A CTA linking to `/services` and `/contact`.
+
+Keep the layout visually engaging, with alternating image/text sections and a restrained motion reveal. Clearly mark any unconfirmed company facts as content requiring approval.
+
+## 7. Our Services page — `/services`
+
+Build a dedicated service landing page containing all six services in detail.
+
+- Intro hero: `Industrial Services. Practical Solutions.`
+- Short introduction to SANIVATE’s service offering.
+- Six clearly separated service sections or detailed cards for Manpower Supply, Equipment Services, Camp Setup & Facilities, Industrial Materials, Scrap Management, and WQT Services.
+- Each service should have a relevant realistic image, concise description, benefits or scope bullets, and a `Request This Service` CTA.
+- Service CTAs should route to `/contact` and preselect the relevant service in the quote form, using a safe query parameter or an equivalent accessible implementation.
+- Do not invent equipment brands, technical standards, licenses, staff qualifications, or specific WQT deliverables.
+- Add a final quote CTA.
+
+Use reusable React components and a shared service data source. Keep the page easy to update when service details change.
+
+## 8. Contact Us page — `/contact`
+
+Create a professional contact page with a clear enquiry path.
+
+Include:
+
+- Heading: `Let’s Work Together`
+- Supporting text inviting customers to discuss their project needs.
+- A quote/enquiry form with:
+  - Full Name
+  - Company Name
+  - Work Email
+  - Phone Number
+  - Service Required (select from the six services)
+  - Project Location (optional)
+  - Message / Requirements
+  - Consent checkbox if required by the chosen privacy approach
+- Clear inline validation and error messages.
+- Loading, success and failure states.
+- Accessible labels and keyboard navigation.
+- Contact information and a map only when verified business details are supplied.
+
+**Important:** Do not make the form pretend to send. Implement a real submission endpoint only when the backend/email provider is configured. If no backend is supplied, create a clearly documented integration point and show an honest “form is not connected yet” development state rather than claiming a message was sent. Validate input on the server, protect against spam, and never expose API keys in client-side code.
+
+## 9. Images and image-generation workflow
+
+Use the uploaded full-page screenshot as the main visual reference and the uploaded SANIVATE logo as the official brand asset.
+
+Use realistic industrial photography for:
+
+- Hero refinery and workers in PPE.
+- Skilled and general manpower.
+- Equipment and excavators.
+- Camp buildings and accommodation.
+- Industrial pipes, materials and components.
+- Scrap collection and processing.
+- WQT-related industrial work where accurate and appropriate.
+- Oil & gas, construction, petrochemical, and manufacturing environments.
+
+### Image quality rules
+
+- Prefer licensed stock photos or generated assets that may legally be used in the project.
+- Use high-quality, photorealistic imagery with realistic people, PPE, equipment and industrial environments.
+- Keep the visual tone consistent across all images.
+- Generate or source image assets individually for each purpose; do not use one generated collage as the actual website background.
+- Do not ask image generation to render the SANIVATE logo or readable website text inside photographs. Place the official logo and real text in HTML.
+- Store images in a clear directory such as `public/images/`.
+- Use descriptive file names, appropriate dimensions, responsive crops, and meaningful alt text.
+- Use `next/image` with appropriate `sizes`, dimensions or aspect ratios, and `priority` only for the main above-the-fold hero image.
+- Lazy-load below-the-fold imagery.
+- Do not use unverified external image URLs that may break. Prefer local assets or a configured image provider.
+- If an image is missing, provide a polished local placeholder and document which asset needs replacing.
+
+## 10. Animation and interaction system
+
+Use **Framer Motion** for subtle, premium animation across all four pages. Motion should support hierarchy and usability, not distract.
+
+### Required animations
+
+- Hero eyebrow, heading, description and CTA: staggered fade-up entrance.
+- Heading emphasis: animate the heading as a whole or use a restrained word reveal; preserve readable text and avoid character-by-character motion that harms accessibility.
+- Hero image: subtle opacity/scale entrance; avoid large parallax movement.
+- Service cards: staggered reveal as they enter the viewport.
+- Images: restrained hover zoom, with overflow clipped inside the image container.
+- Buttons: small hover lift or color transition; clear pressed state.
+- Arrow icons: subtle horizontal movement on hover.
+- Section headings and content: once-only viewport reveal where appropriate.
+- About page image/text sections: alternating restrained reveal.
+- Process steps: sequential but quick entrance.
+- Navigation: simple active/hover indicators.
+- Mobile menu: smooth open/close transition.
+- CTA sections: simple fade or reveal.
+- Page transitions: optional, fast and unobtrusive; do not delay navigation.
+
+### Animation rules
+
+- Prefer transform and opacity for performance.
+- Use short durations, generally around 0.2–0.65 seconds.
+- Avoid animation on every tiny element.
+- Avoid scroll-jacking, forced delays, heavy continuous motion, large blur filters, and excessive parallax.
+- Respect `prefers-reduced-motion`; provide a reduced-motion experience.
+- Ensure all essential content is visible if JavaScript or animation fails.
+- Avoid layout shifts during animation.
+- Do not animate the entire page in a way that delays reading or interaction.
+
+Create reusable motion variants and components rather than duplicating animation code throughout the application.
+
+## 11. Button system
+
+Create a consistent button component or reusable styles.
+
+### Primary button
+
+- SANIVATE blue background.
+- White semibold text.
+- Right-arrow icon.
+- Moderate rounded corners, not excessively pill-shaped.
+- Subtle shadow only when useful.
+- Smooth hover transition, tiny lift, and darker/stronger blue hover state.
+- Visible focus ring and accessible contrast.
+
+### Secondary button
+
+- White or transparent background.
+- Blue or navy border and text.
+- Smooth background and text-color transition.
+- Clear hover and focus states.
+
+### Text links
+
+- Underline or arrow movement on hover.
+- Clear visual distinction from body text.
+- Never rely on color alone to show interactivity.
+
+All buttons must have real, meaningful actions. Use semantic links for navigation and actual buttons for actions.
+
+## 12. Responsive design requirements
+
+Build and test at these approximate viewport widths:
+
+- Small mobile: 320–375 px
+- Standard mobile: 390–430 px
+- Tablet: 768 px
+- Laptop: 1024–1280 px
+- Desktop: 1440 px and above
+
+Requirements:
+
+- No horizontal overflow.
+- No clipped headings, buttons, images, or cards.
+- Header converts into a functional mobile menu.
+- Hero content stacks naturally on mobile; keep the heading readable and CTAs easy to tap.
+- Services use three columns on wide screens, two on tablet where appropriate, and one or two on mobile depending on card readability.
+- Process steps stack vertically on mobile.
+- Footer columns stack cleanly.
+- Forms fit the viewport with readable labels and large touch targets.
+- Maintain sensible line lengths and whitespace.
+- Do not shrink the entire desktop page to imitate a mobile layout.
+- Ensure images use intentional responsive cropping and do not cover important content.
+
+## 13. Performance and accessibility
+
+Performance goals should be measured, not merely claimed.
+
+- Optimize local images and use appropriate image formats.
+- Use `next/image` and `next/font`.
+- Avoid unnecessary client components; keep static sections server-rendered where practical.
+- Use client components only where interactivity or Framer Motion requires them.
+- Lazy-load below-the-fold images and non-critical components.
+- Avoid oversized animation libraries or duplicate dependencies.
+- Avoid autoplay video backgrounds unless essential and properly optimized.
+- Minimize layout shift and heavy JavaScript.
+- Keep the console free of React warnings, missing-key warnings, hydration errors, and broken asset requests.
+- Use semantic HTML landmarks, correct heading order, accessible forms, descriptive alt text, keyboard navigation, and visible focus states.
+- Respect reduced-motion preferences.
+- Check color contrast and touch-target size.
+- Add page-specific metadata, Open Graph metadata, a favicon using approved brand assets, and a sensible robots/sitemap setup.
+- Do not promise a particular Lighthouse score without running a test. Measure and improve Core Web Vitals.
+
+## 14. SEO and metadata
+
+Set page-specific titles and descriptions:
+
+- Home: `SANIVATE | Industrial Manpower, Equipment & Support Services`
+- About: `About SANIVATE | Industrial Support Solutions`
+- Services: `Industrial Services | Manpower, Equipment, Materials & More | SANIVATE`
+- Contact: `Contact SANIVATE | Request an Industrial Services Quote`
+
+Use descriptive headings, meaningful internal links, clean URLs, canonical URLs when the production domain is confirmed, Open Graph metadata, and structured data only when accurate and appropriate. Do not invent an address, phone number, rating, or company details for schema markup.
+
+## 15. Project structure
+
+Use a clean, maintainable structure similar to:
+
+```text
+src/
+  app/
+    layout.tsx
+    page.tsx
+    globals.css
+    about/
+      page.tsx
+    services/
+      page.tsx
+    contact/
+      page.tsx
+    api/
+      contact/
+        route.ts        # only if a real server-side integration is configured
+  components/
+    layout/
+      Header.tsx
+      Footer.tsx
+      MobileNav.tsx
+    home/
+      Hero.tsx
+      TrustBar.tsx
+      ServicesOverview.tsx
+      WhyChooseUs.tsx
+      Industries.tsx
+      WorkProcess.tsx
+      ProjectShowcase.tsx
+      FinalCTA.tsx
+    services/
+      ServiceCard.tsx
+      ServiceDetail.tsx
+    contact/
+      QuoteForm.tsx
+    ui/
+      Button.tsx
+      SectionHeading.tsx
+      Container.tsx
+      Reveal.tsx
+      MotionProvider.tsx
+  data/
+    services.ts
+    site.ts
+  lib/
+    utils.ts
+public/
+  images/
+  logo/
+```
+
+Adjust the structure if needed, but keep components reusable and easy to understand. Avoid placing the entire site in one giant component.
+
+## 16. Content and configuration
+
+Centralize editable content such as:
+
+- Business email and phone.
+- Address and working hours.
+- Social profile URLs.
+- Service descriptions.
+- Hero copy and CTAs.
+- Image paths.
+- SEO metadata.
+
+Use a single configuration file or a clearly documented environment/configuration approach. Do not hardcode the same service content independently on multiple pages.
+
+The uploaded logo must be used in the header and footer with preserved proportions. If both light and dark logo variants are supplied, use the correct version for each background.
+
+## 17. Quality assurance and completion checklist
+
+Before declaring the work complete:
+
+- [ ] All four routes load directly and through internal navigation.
+- [ ] Header and footer are consistent on all pages.
+- [ ] All six services appear with consistent wording and working links.
+- [ ] Logo displays correctly without distortion.
+- [ ] Realistic images load and have suitable responsive crops.
+- [ ] Quote CTAs navigate correctly.
+- [ ] Mobile navigation works with mouse, touch, and keyboard.
+- [ ] Contact form validation and submission behavior are honest and functional.
+- [ ] All buttons and links work.
+- [ ] Animations are smooth, restrained, and respect reduced-motion preferences.
+- [ ] No horizontal overflow at tested widths.
+- [ ] No missing assets, broken routes, console errors, or hydration errors.
+- [ ] TypeScript checks and linting pass.
+- [ ] Production build completes successfully.
+- [ ] SEO metadata and page titles are present.
+- [ ] No fabricated testimonials, clients, certifications, statistics, or contact details remain.
+- [ ] README explains setup, development, build, environment variables, image replacement, and contact-form integration.
+
+## 18. How to execute the project
+
+Work in this order:
+
+1. Inspect the uploaded reference screenshot and official logo.
+2. Establish the theme tokens, typography, image assets, and shared layout.
+3. Build the header, footer, button system, container, and reusable motion components.
+4. Implement the Home page to match the reference visual direction.
+5. Build the About, Services, and Contact pages.
+6. Add realistic imagery and verify that assets are local or reliably configured.
+7. Add the motion system and reduced-motion support.
+8. Implement and test the responsive mobile menu and quote form.
+9. Add metadata and accessibility improvements.
+10. Run lint, type checks, and a production build; fix all issues.
+11. Test all four routes and key interactions at mobile, tablet, laptop, and desktop widths.
+12. Provide a concise completion summary, list any required business details that remain unconfirmed, and explain how to run and deploy the project.
+
+**Final instruction:** Build the complete website, not just a screenshot or a static mockup. Match the supplied SANIVATE reference closely in brand color, composition, industrial photography, service cards, navy feature sections, and blue CTAs, while improving responsiveness, readability, accessibility, speed, and maintainability. Deliver clean, working Next.js code using TypeScript, Tailwind CSS, Framer Motion, and Turbopack-compatible development tooling. Never claim an integration or feature works unless it has actually been implemented and tested.
+"""
+
+out_path = "/mnt/data/SANIVATE_End_to_End_Master_Prompt.md"
+pypandoc.convert_text(content, "md", format="md", outputfile=out_path, extra_args=["--standalone"])
+print(f"Created: {out_path}")
+print(f"Size: {os.path.getsize(out_path):,} bytes")
