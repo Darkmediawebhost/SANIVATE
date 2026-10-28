@@ -18,7 +18,7 @@ export interface ProjectItem {
 export const PROJECTS_DATA: ProjectItem[] = [
   {
     id: "hyundai-amiral",
-    name: "Hyundai NSC / Hyundai Amiral",
+    name: "Hyundai Nsc / Hyundai Amiral",
     client: "Hyundai Engineering Co., Ltd.",
     partner: "SATORP / SINOPEC",
     category: "Heavy Lifting & Petrochemical",
@@ -144,7 +144,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
   },
   {
     id: "sinopec-rastanura",
-    name: "SINOPEC RASTANURA",
+    name: "Sinopec Rastanura",
     client: "SINOPEC",
     partner: "Saudi Aramco Operations",
     category: "Downstream Refining & Maintenance",

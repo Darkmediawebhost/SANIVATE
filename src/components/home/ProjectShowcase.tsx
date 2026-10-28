@@ -73,7 +73,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ onNavigate }) 
       } else if (window.innerWidth < 1024) {
         setVisibleCount(2);
       } else {
-        setVisibleCount(3);
+        setVisibleCount(2);
       }
     };
     handleResize();
@@ -136,7 +136,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ onNavigate }) 
               FEATURED PROJECTS
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-[#062747] tracking-tight mt-0.5">
-              Project Showcase
+              Ongoing Projects
             </h2>
           </div>
 
@@ -205,22 +205,22 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ onNavigate }) 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none" />
 
                   {/* ONLY Project Name Overlay Badge */}
-                  <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2 pointer-events-none">
+                  {/* <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2 pointer-events-none">
                     <span className="bg-[#0798F2] px-3 py-1 rounded-lg text-white font-mono font-bold text-xs sm:text-sm tracking-wide shadow-md">
-                      [{slide.name}]
+                      {slide.name}
                     </span>
                     
                     <span className="bg-black/60 backdrop-blur-md p-1.5 rounded-lg text-white opacity-0 group-hover:opacity-100 transition-opacity">
                       <Maximize2 className="w-3.5 h-3.5" />
                     </span>
-                  </div>
+                  </div> */}
 
                   {/* Bottom Counter Pill */}
-                  <div className="absolute bottom-3 right-3.5 pointer-events-none">
+                  {/* <div className="absolute bottom-3 right-3.5 pointer-events-none">
                     <span className="text-[11px] font-mono text-white/90 bg-black/50 backdrop-blur-sm px-2.5 py-0.5 rounded-md border border-white/10">
                       {idx + 1} / {PROJECT_SLIDES.length}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
