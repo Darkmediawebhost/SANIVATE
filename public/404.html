@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SANIVATE | Redirecting...</title>
+    <script>
+      (function() {
+        // Automatically recover from 404 on any static hosting or server
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        var cleanPath = path.replace(/^\//, '');
+        if (cleanPath) {
+          window.location.replace('/#/' + cleanPath + search + hash);
+        } else {
+          window.location.replace('/' + search + hash);
+        }
+      })();
+    </script>
+  </head>
+  <body style="font-family: system-ui, -apple-system, sans-serif; background: #031A30; color: #fff; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+    <div style="text-align: center;">
+      <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 8px;">Loading SANIVATE...</h2>
+      <p style="color: #94a3b8; font-size: 14px;">Redirecting you to the requested page...</p>
+    </div>
+  </body>
+</html>
+

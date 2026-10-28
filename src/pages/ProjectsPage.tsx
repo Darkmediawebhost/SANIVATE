@@ -143,7 +143,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate }) => {
                 }`}
               >
                 <Layers className="w-3.5 h-3.5" />
-                <span>By Project (5)</span>
+                <span>By Project ({PROJECTS_DATA.length})</span>
               </button>
               <button
                 onClick={() => setViewType('all-photos')}
@@ -154,7 +154,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate }) => {
                 }`}
               >
                 <Grid3X3 className="w-3.5 h-3.5" />
-                <span>All Photos (8)</span>
+                <span>All Photos ({allProjectPhotos.length})</span>
               </button>
             </div>
           </div>
