@@ -216,7 +216,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ onNavigate }) 
 
                   {/* ONLY Project Name Overlay Badge */}
                   <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2 pointer-events-none">
-                    <span className="bg-[#0798F2] px-3 py-1 rounded-lg text-white font-mono font-bold text-xs sm:text-sm tracking-wide shadow-md">
+                    <span className="bg-[#0798F2] px-3 py-1 rounded-lg text-white font-mono font-bold text-xs sm:text-sm tracking-wide shadow-md uppercase">
                       {slide.name}
                     </span>
                     
