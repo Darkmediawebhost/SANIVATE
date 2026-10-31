@@ -215,7 +215,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ onNavigate }) 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none" />
 
                   {/* ONLY Project Name Overlay Badge */}
-                  {/* <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2 pointer-events-none">
+                  <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2 pointer-events-none">
                     <span className="bg-[#0798F2] px-3 py-1 rounded-lg text-white font-mono font-bold text-xs sm:text-sm tracking-wide shadow-md">
                       {slide.name}
                     </span>
@@ -223,7 +223,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ onNavigate }) 
                     <span className="bg-black/60 backdrop-blur-md p-1.5 rounded-lg text-white opacity-0 group-hover:opacity-100 transition-opacity">
                       <Maximize2 className="w-3.5 h-3.5" />
                     </span>
-                  </div> */}
+                  </div>
 
                   {/* Bottom Counter Pill */}
                   {/* <div className="absolute bottom-3 right-3.5 pointer-events-none">

@@ -266,10 +266,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
       </section>
 
       {/* Founder's Message Section */}
-      <section className="py-20 lg:py-24 bg-slate-50 border-y border-slate-200" id="founders-message">
+      {/* <section className="py-20 lg:py-24 bg-slate-50 border-y border-slate-200" id="founders-message">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-xs font-bold tracking-widest uppercase text-[#0798F2] mb-2">
               Leadership &amp; Strategy
@@ -282,17 +281,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
             </p>
           </div>
 
-          {/* Letter Presentation Container */}
           <div className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#E4EDF5] shadow-xl shadow-slate-200/60 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               
-              {/* Founder Image Column */}
               <div className="lg:col-span-5 flex flex-col items-center">
                 <div className="relative group w-full max-w-sm mx-auto">
-                  {/* Decorative background glow */}
                   <div className="absolute -inset-2 bg-gradient-to-tr from-[#0798F2]/25 to-[#062747]/15 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
                   
-                  {/* Portrait Card */}
                   <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-2xl bg-slate-900 aspect-[3/4] sm:aspect-[4/5]">
                     <img
                       src="/assets/founder.jpg"
@@ -302,7 +297,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#031A30]/90 via-[#031A30]/20 to-transparent" />
                     
-                    {/* Floating Info on Image */}
                     <div className="absolute bottom-4 left-4 right-4 text-white p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
                       <div className="flex items-center gap-1.5 text-[11px] text-[#0798F2] font-bold uppercase tracking-wider mb-0.5">
                         <span className="w-2 h-2 rounded-full bg-[#0798F2] animate-pulse" />
@@ -315,15 +309,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
                 </div>
               </div>
 
-              {/* Message Content Column */}
               <div className="lg:col-span-7 space-y-6">
                 
-                {/* Quote Mark */}
                 <div className="text-[#0798F2] opacity-30 font-serif text-6xl lg:text-7xl leading-none select-none -mb-3">
                   &ldquo;
                 </div>
 
-                {/* Verbatim Founder's Message Paragraphs */}
                 <div className="space-y-5 text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
                   <p>
                     My extensive background in business and management has helped me hone my entrepreneurial desire to realize the dream of starting this company.
@@ -338,10 +329,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
                   </p>
                 </div>
 
-                {/* Formal Signature & Attribution Block */}
                 <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
                   <div>
-                    {/* Stylized Executive Signature Line */}
                     <div className="font-serif italic text-2xl sm:text-3xl text-[#062747] tracking-wide mb-1 font-semibold">
                       Abdul Kawsar Asanabail
                     </div>
@@ -366,7 +355,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* Managing Director Section */}
       <section className="py-20 lg:py-24 bg-white border-t border-slate-200" id="managing-director">
@@ -402,7 +391,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
                   {/* Portrait */}
                   <div className="relative rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl bg-slate-900 aspect-[3/4]">
                     <img
-                      src="/assets/team/image.png"
+                      src="/assets/team/imran.png"
                       alt="Mohammed Imran Sharif — Managing Director, Sanivate Corporation"
                       className="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105"
                       loading="lazy"
