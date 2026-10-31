@@ -391,7 +391,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
                   {/* Portrait */}
                   <div className="relative rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl bg-slate-900 aspect-[3/4]">
                     <img  
-                      src="/assets/team/imran.png"
+                      src="/assets/team/Imran.png"
                       alt="Mohammed Imran Sharif — Managing Director, Sanivate Corporation"
                       className="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105"
                       loading="lazy"
