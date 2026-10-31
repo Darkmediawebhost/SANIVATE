@@ -53,6 +53,16 @@ const PROJECT_SLIDES: SlideItem[] = [
     id: 'sinopec-rastanura-2',
     image: '/assets/projects/sinopec-rastanura-1.jpeg',
     name: 'SINOPEC RASTANURA'
+  },
+  {
+    id: 'sinopec-rastanura-2',
+    image: '/assets/projects/Turaif.png',
+    name: 'Ma’aden Turaif'
+  },
+  {
+    id: 'sinopec-rastanura-2',
+    image: '/assets/projects/Turaif1.png',
+    name: 'Ma’aden Turaif'
   }
 ];
 
@@ -291,7 +301,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ onNavigate }) 
               {/* Lightbox Header Bar */}
               <div className="flex items-center justify-between pb-3 text-white border-b border-white/15">
                 <span className="font-mono text-sm sm:text-base font-black text-white bg-[#0798F2] px-3.5 py-1 rounded-lg">
-                  [{PROJECT_SLIDES[lightboxIndex].name}]
+                  {PROJECT_SLIDES[lightboxIndex].name}
                 </span>
 
                 <div className="flex items-center gap-3">

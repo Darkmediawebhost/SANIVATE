@@ -8,6 +8,7 @@ import {
 import { SITE_CONFIG } from '../../data/site';
 import { SERVICES } from '../../data/services';
 import { smoothEase } from '../ui/Motion';
+import { WhatsAppIcon } from '../ui/WhatsAppButton';
 
 interface HeaderProps {
   currentPage: string;
@@ -151,6 +152,17 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <Phone className="w-3.5 h-3.5 text-[#0798F2]" />
                 <span>{SITE_CONFIG.contact.phoneFormatted}</span>
+              </a>
+              <span className="text-white/20">|</span>
+              <a 
+                href={SITE_CONFIG.contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
+                title="WhatsApp Direct (+966 59 356 6329)"
+              >
+                <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
+                <span>WhatsApp: {SITE_CONFIG.contact.whatsappFormatted}</span>
               </a>
               <span className="text-white/20">|</span>
               <a 
@@ -518,6 +530,21 @@ export const Header: React.FC<HeaderProps> = ({
                   <div className="flex items-start gap-2.5">
                     <MapPin className="w-4 h-4 text-[#0798F2] shrink-0 mt-0.5" />
                     <span>Unit 101 &amp; 102, Al Dana Dist., Al-Jubail, KSA</span>
+                  </div>
+
+                  <div className="flex items-start gap-2.5">
+                    <WhatsAppIcon className="w-4 h-4 text-[#25D366] shrink-0 mt-0.5 fill-current" />
+                    <div className="flex flex-col gap-0.5">
+                      <a 
+                        href={SITE_CONFIG.contact.whatsappUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-[#25D366] font-semibold text-emerald-700 flex items-center gap-1"
+                      >
+                        <span>WhatsApp: {SITE_CONFIG.contact.whatsappFormatted}</span>
+                      </a>
+                      <span className="text-[11px] text-slate-500">Instant Chat &amp; RFQ Support</span>
+                    </div>
                   </div>
 
                   <div className="flex items-start gap-2.5">

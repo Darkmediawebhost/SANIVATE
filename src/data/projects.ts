@@ -172,6 +172,38 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Turnaround Crew Mobilization within 48 Hours",
       "Strict Saudi Aramco Safety Directive Compliance"
     ]
+  },
+
+   {
+    id: "Ma’aden Turaif",
+    name: "Ma’aden Turaif",
+    client: "Ma’aden Turaif",
+    partner: "Saudi Aramco Operations",
+    category: "Downstream Refining & Maintenance",
+    location: "Ras Tanura, Eastern Province, Saudi Arabia",
+    description: "Critical refinery maintenance, turnaround support, and plant expansion operations at the world-scale Ras Tanura coastal crude processing complex, delivering certified 6G welding crews, industrial scaffolding, and heavy equipment support.",
+    image: "/assets/projects/sinopec-rastanura.jpeg",
+    gallery: [
+      "/assets/projects/Turaif.png",
+      "/assets/projects/Turaif1.png",
+    ],
+    galleryCaptions: [
+      "Ras Tanura Plant: Crude distillation units & specialized turnaround maintenance",
+      "Coastal Terminal: Giant Persian Gulf crude storage tank farm & marine pipelines"
+    ],
+    highlights: "World-Scale Coastal Complex · Zero-Disruption Turnaround",
+    year: "Turnaround & Maintenance",
+    stats: [
+      { label: "Refinery Scale", value: "World-Scale Complex" },
+      { label: "Safety Record", value: "Zero Disruption" },
+      { label: "Mobilization", value: "Under 48 Hours" }
+    ],
+    scope: [
+      "Crude Distillation Unit Maintenance",
+      "Tank Farm & Marine Utility Upkeep",
+      "Turnaround Crew Mobilization within 48 Hours",
+      "Strict Saudi Aramco Safety Directive Compliance"
+    ]
   }
 ];
 

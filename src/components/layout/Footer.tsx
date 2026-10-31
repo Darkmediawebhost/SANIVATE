@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, Mail, Phone, Clock, Linkedin, Facebook, Instagram, Youtube, ArrowRight } from 'lucide-react';
 import { SITE_CONFIG } from '../../data/site';
 import { SERVICES } from '../../data/services';
+import { WhatsAppIcon } from '../ui/WhatsAppButton';
 
 interface FooterProps {
   onNavigate: (page: string, params?: { service?: string; section?: string }) => void;
@@ -47,6 +48,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
               A technology haven with diversified business and a single vision. Providing end-to-end manufacturing, industrial services, and equipment solutions across KSA, India, China &amp; Bahrain.
             </p>
             <div className="flex items-center gap-3 pt-2 text-[#062747]">
+              <a
+                href={SITE_CONFIG.contact.whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-full bg-slate-100 hover:bg-[#25D366] hover:text-white flex items-center justify-center transition-colors text-emerald-600"
+                aria-label="WhatsApp"
+                title="Chat on WhatsApp (+966 59 356 6329)"
+              >
+                <WhatsAppIcon className="w-4 h-4 fill-current" />
+              </a>
               <a
                 href={SITE_CONFIG.socials.linkedin}
                 target="_blank"
@@ -215,6 +226,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
                       {SITE_CONFIG.contact.secondaryEmail}
                     </a>
                   )}
+                </div>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366] shrink-0 mt-0.5 fill-current" />
+                <div className="flex flex-col gap-0.5">
+                  <a 
+                    href={SITE_CONFIG.contact.whatsappUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:text-[#25D366] transition-colors font-medium text-emerald-700"
+                  >
+                    WhatsApp: {SITE_CONFIG.contact.whatsappFormatted}
+                  </a>
+                  <span className="text-[11px] text-slate-400">24/7 Rapid Response</span>
                 </div>
               </li>
               <li className="flex items-start gap-2.5">

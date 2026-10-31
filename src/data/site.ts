@@ -18,6 +18,9 @@ export interface CompanyConfig {
     rfqEmail: string;
     phone: string;
     phoneFormatted: string;
+    whatsapp: string;
+    whatsappFormatted: string;
+    whatsappUrl: string;
     officePhone: string;
     supportPhone: string;
     workingHours: string;
@@ -53,6 +56,9 @@ export const SITE_CONFIG: CompanyConfig = {
     rfqEmail: "admin-isd@sanivate.co",
     phone: "+966594997686",
     phoneFormatted: "+966 59 499 7686",
+    whatsapp: "966593566329",
+    whatsappFormatted: "+966 59 356 6329",
+    whatsappUrl: "https://wa.me/966593566329",
     officePhone: "+966 13 362 4445",
     supportPhone: "+966 13 362 4445",
     workingHours: "8:00 AM - 6:00 PM",

@@ -368,6 +368,113 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
         </div>
       </section>
 
+      {/* Managing Director Section */}
+      <section className="py-20 lg:py-24 bg-white border-t border-slate-200" id="managing-director">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Header */}
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-xs font-bold tracking-widest uppercase text-[#0798F2] mb-2">
+              Executive Leadership
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#062747] tracking-tight">
+              Managing Director
+            </h2>
+            <p className="text-sm text-slate-500 mt-2">
+              Driving strategic direction and operational excellence across all Sanivate business verticals.
+            </p>
+          </div>
+
+          {/* Card */}
+          <div className="bg-white rounded-3xl border border-[#E4EDF5] shadow-xl shadow-slate-200/60 overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
+
+              {/* Image Column */}
+              <div className="lg:col-span-5 relative bg-gradient-to-br from-[#02182B] via-[#062747] to-[#04335E] flex flex-col items-center justify-center p-8 sm:p-10 min-h-[380px]">
+                {/* Ambient glows */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[#0798F2]/15 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+
+                <div className="relative group w-full max-w-xs mx-auto">
+                  {/* Glow ring */}
+                  <div className="absolute -inset-2 bg-gradient-to-tr from-[#0798F2]/30 to-[#062747]/20 rounded-3xl blur-xl opacity-80 group-hover:opacity-100 transition duration-500" />
+
+                  {/* Portrait */}
+                  <div className="relative rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl bg-slate-900 aspect-[3/4]">
+                    <img
+                      src="/assets/team/image.png"
+                      alt="Mohammed Imran Sharif — Managing Director, Sanivate Corporation"
+                      className="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#031A30]/80 via-[#031A30]/10 to-transparent" />
+
+                    {/* Name badge on image */}
+                    <div className="absolute bottom-4 left-4 right-4 text-white p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
+                      <div className="flex items-center gap-1.5 text-[11px] text-[#0798F2] font-bold uppercase tracking-wider mb-0.5">
+                        <span className="w-2 h-2 rounded-full bg-[#0798F2] animate-pulse" />
+                        Managing Director
+                      </div>
+                      <p className="font-bold text-base tracking-wide text-white">Mohammed Imran Sharif</p>
+                      <p className="text-xs text-slate-300">Sanivate Corporation</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content Column */}
+              <div className="lg:col-span-7 flex flex-col justify-center p-8 sm:p-10 lg:p-12 space-y-6">
+
+                {/* Quote mark */}
+                <div className="text-[#0798F2] opacity-25 font-serif text-6xl lg:text-7xl leading-none select-none -mb-4">
+                  &ldquo;
+                </div>
+
+                {/* Message */}
+                <div className="space-y-4 text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
+                  <p>
+                    Our strength lies in the depth of our commitment — not just to delivering industrial services, but to building long-term partnerships grounded in trust, technical excellence, and consistent on-site reliability.
+                  </p>
+                  <p className="border-l-4 border-[#0798F2] pl-5 py-2 text-slate-900 font-medium italic bg-[#F1F8FD] rounded-r-xl text-sm sm:text-base">
+                    Every project we undertake reflects Sanivate's promise to its clients: world-class execution standards, fully certified teams, and a supply chain that never lets you down — whether it is a scheduled turnaround or an emergency mobilization.
+                  </p>
+                  <p>
+                    As Managing Director, I am privileged to lead a team whose dedication and expertise place Sanivate among the most trusted industrial partners across the Kingdom of Saudi Arabia and the wider Gulf region.
+                  </p>
+                </div>
+
+                {/* Signature & Attribution */}
+                <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
+                  <div>
+                    <div className="font-serif italic text-2xl sm:text-3xl text-[#062747] tracking-wide mb-1 font-semibold">
+                      Mohammed Imran Sharif
+                    </div>
+                    <p className="text-sm font-bold text-[#062747]">Mohammed Imran Sharif</p>
+                    <p className="text-xs text-[#0798F2] font-semibold mt-0.5">
+                      Managing Director, Sanivate Corporation
+                    </p>
+                  </div>
+
+                  {/* Key highlights */}
+                  <div className="flex flex-wrap gap-2">
+                    {['Strategic Leadership', 'Operations', 'KSA Industrial'].map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-full bg-[#F1F8FD] border border-[#0798F2]/20 text-[11px] font-bold text-[#062747] tracking-wide"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* Our Leadership & Operations Team Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-[#F1F8FD]/70 via-white to-slate-50/70 border-b border-[#E4EDF5]" id="our-team">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

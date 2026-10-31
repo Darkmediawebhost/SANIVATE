@@ -52,12 +52,12 @@ export const ScrollToTop: React.FC = () => {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.6, y: 24 }}
           transition={{ duration: 0.35, ease: smoothEase }}
-          className="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-40"
+          className="relative"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Floating Tooltip Indicator (Desktop) */}
-          <AnimatePresence>
+          {/* <AnimatePresence>
             {isHovered && (
               <motion.div
                 initial={{ opacity: 0, y: 6, scale: 0.92 }}
@@ -70,11 +70,10 @@ export const ScrollToTop: React.FC = () => {
                 <span className="text-[#0798F2] font-mono text-[10px] font-bold">
                   {Math.round(scrollProgress)}%
                 </span>
-                {/* Tooltip caret */}
                 <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px border-4 border-transparent border-t-[#031A30]/95" />
               </motion.div>
             )}
-          </AnimatePresence>
+          </AnimatePresence> */}
 
           {/* Interactive Button with Circular Progress Track */}
           <button

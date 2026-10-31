@@ -8,6 +8,7 @@ import { Button } from '../components/ui/Button';
 import { SITE_CONFIG } from '../data/site';
 import { SERVICES } from '../data/services';
 import { smoothEase, AnimatedWords } from '../components/ui/Motion';
+import { WhatsAppIcon } from '../components/ui/WhatsAppButton';
 
 interface ContactPageProps {
   initialServiceId?: string;
@@ -564,6 +565,27 @@ export const ContactPage: React.FC<ContactPageProps> = ({ initialServiceId, init
                             </a>
                           </div>
                         )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <WhatsAppIcon className="w-5 h-5 text-[#25D366] shrink-0 mt-0.5 fill-current" />
+                    <div>
+                      <p className="font-semibold text-white">Instant WhatsApp Support</p>
+                      <div className="flex flex-col gap-1 mt-0.5 text-xs text-slate-300">
+                        <div className="flex items-center gap-2">
+                          <a 
+                            href={SITE_CONFIG.contact.whatsappUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="text-[#25D366] hover:underline font-semibold flex items-center gap-1.5"
+                          >
+                            <span>{SITE_CONFIG.contact.whatsappFormatted}</span>
+                            <span className="text-[10px] bg-[#25D366]/20 text-[#25D366] px-1.5 py-0.5 rounded border border-[#25D366]/30">Chat Live</span>
+                          </a>
+                        </div>
+                        <p className="text-[11px] text-slate-400">Available 24/7 for urgent RFQs &amp; crew mobilization</p>
                       </div>
                     </div>
                   </div>

@@ -10,6 +10,7 @@ import { ContactPage } from './pages/ContactPage';
 import { SearchModal } from './components/ui/SearchModal';
 import { LegalModal } from './components/ui/LegalModal';
 import { ScrollToTop } from './components/ui/ScrollToTop';
+import { WhatsAppButton } from './components/ui/WhatsAppButton';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<string>('home');
@@ -217,8 +218,18 @@ export default function App() {
         onOpenLegal={(type) => setLegalModalType(type)}
       />
 
-      {/* Global Scroll to Top Button with Dynamic Progress Indicator */}
-      <ScrollToTop />
+
+      {/* ── Global Floating Action Button Stack (Bottom-Right Corner) ──
+          Order: ScrollToTop sits above WhatsApp (flex-col, gap).
+          WhatsApp is always visible; ScrollToTop appears after 300px scroll. */}
+      <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 flex flex-col items-center gap-3">
+        {/* ScrollToTop appears on top (rendered first = visually higher in column) */}
+         <WhatsAppButton /> <ScrollToTop />
+        {/* WhatsApp button always anchored at the bottom */}
+      
+      </div>
+
+     
 
       {/* Interactive Global Search Modal */}
       <SearchModal
