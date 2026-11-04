@@ -98,76 +98,76 @@ export const CASE_STUDIES: CaseStudy[] = [
       ]
     }
   },
-  {
-    id: "cs-remote-camp",
-    title: "Turnkey 800-Person Workforce Camp Setup in 45 Days",
-    clientSector: "Remote Infrastructure",
-    location: "Yanbu Industrial Basin",
-    duration: "3:30 MIN",
-    thumbnail: "/assets/images/service_modular_camp_1792910642635.jpg",
-    category: "camps",
-    stats: [
-      { label: "Camp Capacity", value: "800 Personnel" },
-      { label: "Delivery Duration", value: "45 Days" },
-      { label: "Independent Power", value: "2.5 MW" },
-      { label: "Compliance", value: "Civil Defense & Baladiya" }
-    ],
-    overview: "Fast-track engineering, delivery, and commissioning of a complete modular containerized camp complex for engineers and trade workforce on a remote pipeline project.",
-    challenge: "The remote location lacked existing electrical grid or municipal water connections, requiring a fully self-sufficient life-support infrastructure.",
-    solution: "Fabricated and erected modular residential blocks, commercial kitchen and dining hall, clinic, recreational cabin, auto-sync diesel generator plant, and sewage treatment unit.",
-    result: "Workforce moved in seamlessly on day 45, receiving full civil defense and labor welfare compliance approvals from municipal authorities.",
-    testimonial: {
-      quote: "Our workers enjoyed air-conditioned comfort, hygienic dining, and reliable utilities throughout the hot summer months. SANIVATE built a true home away from home.",
-      author: "Camp Administration Manager",
-      role: "Workforce Logistics Director",
-      organization: "Pipeline Construction Joint Venture"
-    },
-    videoDetails: {
-      title: "Rapid Modular Camp Installation & Self-Sustaining Utilities",
-      recordedDate: "Greenfield Pipeline Infrastructure Project",
-      aspectRatio: "16:9",
-      keyHighlights: [
-        "Site grading and structural foundation leveling",
-        "Crane positioning of insulated modular container cabins",
-        "Utility installation: 2.5MW synchronized diesel power & RO water plant",
-        "Inspection tour of mess hall, recreation lounge, and medical unit"
-      ]
-    }
-  },
-  {
-    id: "cs-wqt-qualification",
-    title: "High-Pressure Alloy Welding Qualification (WQT) for Subsea Headers",
-    clientSector: "Corrosion-Resistant Fabrication",
-    location: "SANIVATE Technical Center, Jubail",
-    duration: "2:50 MIN",
-    thumbnail: "/assets/images/service_welding_wqt_1792910643744.jpg",
-    category: "quality",
-    stats: [
-      { label: "Welders Tested", value: "120 Personnel" },
-      { label: "Testing Code", value: "ASME Section IX" },
-      { label: "NDT Pass Rate", value: "98.2% Radiography" },
-      { label: "Dossier Turnaround", value: "24 Hours" }
-    ],
-    overview: "Technical screening, coupon preparation, and ASME IX welder qualification testing for 120 specialized GTAW/SMAW alloy welders on high-pressure sour gas lines.",
-    challenge: "Stringent client engineering specifications demanded zero defect tolerance and third-party inspection agency witnessing for each test weld coupon.",
-    solution: "Organized structured qualification batches at our Jubail testing workshop with full bevel preparation, preheat control, and immediate on-site radiographic & bend testing.",
-    result: "118 certified welders were mobilized with official client-approved WPQR cards, allowing fabrication to proceed without delays.",
-    testimonial: {
-      quote: "The rigor of SANIVATE's WQT facility is top tier. Their welding inspectors understand code tolerances and documentation standards thoroughly.",
-      author: "QA/QC Welding Manager",
-      role: "Quality Assurance Lead",
-      organization: "Pressure Vessel & Piping Manufacturer"
-    },
-    videoDetails: {
-      title: "ASME IX Welder Qualification Testing & Non-Destructive Examination",
-      recordedDate: "Technical Quality Verification Program",
-      aspectRatio: "16:9",
-      keyHighlights: [
-        "Coupon bevel verification & root gap fit-up checks",
-        "In-process TIG root pass monitoring and interpass temperature logging",
-        "Guided bend testing and metallurgical fracture inspection",
-        "Third-party inspection endorsement and WPQR documentation issuance"
-      ]
-    }
-  }
+  // {
+  //   id: "cs-remote-camp",
+  //   title: "Turnkey 800-Person Workforce Camp Setup in 45 Days",
+  //   clientSector: "Remote Infrastructure",
+  //   location: "Yanbu Industrial Basin",
+  //   duration: "3:30 MIN",
+  //   thumbnail: "/assets/images/service_modular_camp_1792910642635.jpg",
+  //   category: "camps",
+  //   stats: [
+  //     { label: "Camp Capacity", value: "800 Personnel" },
+  //     { label: "Delivery Duration", value: "45 Days" },
+  //     { label: "Independent Power", value: "2.5 MW" },
+  //     { label: "Compliance", value: "Civil Defense & Baladiya" }
+  //   ],
+  //   overview: "Fast-track engineering, delivery, and commissioning of a complete modular containerized camp complex for engineers and trade workforce on a remote pipeline project.",
+  //   challenge: "The remote location lacked existing electrical grid or municipal water connections, requiring a fully self-sufficient life-support infrastructure.",
+  //   solution: "Fabricated and erected modular residential blocks, commercial kitchen and dining hall, clinic, recreational cabin, auto-sync diesel generator plant, and sewage treatment unit.",
+  //   result: "Workforce moved in seamlessly on day 45, receiving full civil defense and labor welfare compliance approvals from municipal authorities.",
+  //   testimonial: {
+  //     quote: "Our workers enjoyed air-conditioned comfort, hygienic dining, and reliable utilities throughout the hot summer months. SANIVATE built a true home away from home.",
+  //     author: "Camp Administration Manager",
+  //     role: "Workforce Logistics Director",
+  //     organization: "Pipeline Construction Joint Venture"
+  //   },
+  //   videoDetails: {
+  //     title: "Rapid Modular Camp Installation & Self-Sustaining Utilities",
+  //     recordedDate: "Greenfield Pipeline Infrastructure Project",
+  //     aspectRatio: "16:9",
+  //     keyHighlights: [
+  //       "Site grading and structural foundation leveling",
+  //       "Crane positioning of insulated modular container cabins",
+  //       "Utility installation: 2.5MW synchronized diesel power & RO water plant",
+  //       "Inspection tour of mess hall, recreation lounge, and medical unit"
+  //     ]
+  //   }
+  // },
+  // {
+  //   id: "cs-wqt-qualification",
+  //   title: "High-Pressure Alloy Welding Qualification (WQT) for Subsea Headers",
+  //   clientSector: "Corrosion-Resistant Fabrication",
+  //   location: "SANIVATE Technical Center, Jubail",
+  //   duration: "2:50 MIN",
+  //   thumbnail: "/assets/images/service_welding_wqt_1792910643744.jpg",
+  //   category: "quality",
+  //   stats: [
+  //     { label: "Welders Tested", value: "120 Personnel" },
+  //     { label: "Testing Code", value: "ASME Section IX" },
+  //     { label: "NDT Pass Rate", value: "98.2% Radiography" },
+  //     { label: "Dossier Turnaround", value: "24 Hours" }
+  //   ],
+  //   overview: "Technical screening, coupon preparation, and ASME IX welder qualification testing for 120 specialized GTAW/SMAW alloy welders on high-pressure sour gas lines.",
+  //   challenge: "Stringent client engineering specifications demanded zero defect tolerance and third-party inspection agency witnessing for each test weld coupon.",
+  //   solution: "Organized structured qualification batches at our Jubail testing workshop with full bevel preparation, preheat control, and immediate on-site radiographic & bend testing.",
+  //   result: "118 certified welders were mobilized with official client-approved WPQR cards, allowing fabrication to proceed without delays.",
+  //   testimonial: {
+  //     quote: "The rigor of SANIVATE's WQT facility is top tier. Their welding inspectors understand code tolerances and documentation standards thoroughly.",
+  //     author: "QA/QC Welding Manager",
+  //     role: "Quality Assurance Lead",
+  //     organization: "Pressure Vessel & Piping Manufacturer"
+  //   },
+  //   videoDetails: {
+  //     title: "ASME IX Welder Qualification Testing & Non-Destructive Examination",
+  //     recordedDate: "Technical Quality Verification Program",
+  //     aspectRatio: "16:9",
+  //     keyHighlights: [
+  //       "Coupon bevel verification & root gap fit-up checks",
+  //       "In-process TIG root pass monitoring and interpass temperature logging",
+  //       "Guided bend testing and metallurgical fracture inspection",
+  //       "Third-party inspection endorsement and WPQR documentation issuance"
+  //     ]
+  //   }
+  // }
 ];

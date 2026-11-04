@@ -47,7 +47,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({
         />
 
         {/* Category Filters */}
-        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-6 mb-4">
+        {/* <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-6 mb-4">
           {filters.map((f) => (
             <button
               key={f.id}
@@ -61,7 +61,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({
               {f.label}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* 2x2 or 4-col Responsive Grid */}
         <motion.div
