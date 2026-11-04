@@ -194,7 +194,7 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* 2. Main Sticky Navigation Bar */}
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-200 bg-[#F7F7F7] backdrop-blur-md border-b border-slate-200/80 ${
+        className={`sticky top-0 z-40 w-full transition-all duration-200 bg-white backdrop-blur-md border-b border-slate-200/80 ${
           isScrolled ? 'shadow-sm py-2.5' : 'py-3.5 sm:py-4'
         }`}
       >
@@ -211,7 +211,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <img
                   src={SITE_CONFIG.logoUrl}
                   alt="SANIVATE"
-                  className="h-10 sm:h-11 w-auto object-contain"
+                  className="h-12 sm:h-16 w-auto object-contain"
                 />
               </button>
             </div>

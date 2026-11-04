@@ -60,9 +60,14 @@ const PROJECT_SLIDES: SlideItem[] = [
     name: 'Ma’aden Turaif'
   },
   {
-    id: 'sinopec-rastanura-2',
-    image: '/assets/projects/Turaif1.png',
-    name: 'Ma’aden Turaif'
+    id: 'Sabtank',
+    image: '/assets/projects/Sabtank.jpeg',
+    name: 'Sabtank'
+  },
+    {
+    id: 'Sabtank-1',
+    image: '/assets/projects/Sabtank1.jpeg',
+    name: 'Sabtank'
   }
 ];
 

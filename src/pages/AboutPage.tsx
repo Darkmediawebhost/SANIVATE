@@ -465,10 +465,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
       </section>
 
       {/* Our Leadership & Operations Team Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-[#F1F8FD]/70 via-white to-slate-50/70 border-b border-[#E4EDF5]" id="our-team">
+      {/* <section className="py-20 lg:py-28 bg-gradient-to-b from-[#F1F8FD]/70 via-white to-slate-50/70 border-b border-[#E4EDF5]" id="our-team">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Section Header with Animated Highlight */}
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0798F2]/10 border border-[#0798F2]/20 text-xs font-bold text-[#0798F2] uppercase tracking-wider">
               <Users className="w-3.5 h-3.5" />
@@ -486,9 +485,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
 
 
 
-                    {/* Full Images Showcase - Clean, Uncropped & No Popup */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
-            {/* Photo 1: Portrait Team Photo in Jubail Office (5 cols) */}
             <div className="lg:col-span-5 flex justify-center">
               <div className="w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E4EDF5] shadow-lg bg-white p-2 sm:p-2.5 hover:shadow-xl transition-shadow duration-300">
                 <img
@@ -500,7 +497,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
               </div>
             </div>
 
-            {/* Photos 2 & 3: Landscape Team Photos Stacked (7 cols) */}
             <div className="lg:col-span-7 flex flex-col gap-6 sm:gap-8 justify-center">
               <div className="w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E4EDF5] shadow-lg bg-white p-2 sm:p-2.5 hover:shadow-xl transition-shadow duration-300">
                 <img
@@ -522,9 +518,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Business Verticals & Scope Section */}
       <section className="py-20 bg-white" id="verticals">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           

@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#F7F7F7] border-t border-[#E4EDF5] text-slate-600 pt-16 pb-8">
+    <footer className="bg-white border-t border-[#E4EDF5] text-slate-600 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-[#E4EDF5]">
           
@@ -27,7 +27,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
                   <img
                     src={SITE_CONFIG.logoUrl}
                     alt="SANIVATE"
-                    className="h-10 w-auto object-contain"
+                    className="h-14 w-auto object-contain"
                   />
                 </button>
                 <div className="h-8 w-px bg-slate-200" />

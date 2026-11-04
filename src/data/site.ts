@@ -70,7 +70,8 @@ export const SITE_CONFIG: CompanyConfig = {
     instagram: "https://www.instagram.com/sanivate.co/",
     twitter: "https://x.com/4bdullah_4445"
   },
-  logoUrl: "/assets/aistudio/1280245e-f431-4f5e-9ca7-a41666d3c017_3180ce54.jpg"
+  // logoUrl: "/assets/aistudio/1280245e-f431-4f5e-9ca7-a41666d3c017_3180ce54.jpg"
+ logoUrl: "/assets/Sanivate.png"
 };
 
 export const TRUST_METRICS = [
