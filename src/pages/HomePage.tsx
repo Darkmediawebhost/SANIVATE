@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Hero } from '../components/home/Hero';
+import { VideoBanner } from '../components/home/VideoBanner';
 import { ServicesOverview } from '../components/home/ServicesOverview';
 import { WhyChooseUs } from '../components/home/WhyChooseUs';
 import { IndustriesSection } from '../components/home/IndustriesSection';
@@ -40,7 +40,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, targetSection })
 
   return (
     <div className="w-full">
-      <Hero onNavigate={onNavigate} />
+      {/* New Video Banner Section */}
+      <VideoBanner />
       <ServicesOverview onNavigate={onNavigate} />
       
       <WhyChooseUs onNavigate={onNavigate} />
