@@ -433,7 +433,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
                 </div>
 
                 {/* Signature & Attribution */}
-                <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
+                {/* <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
                   <div>
                     <div className="font-serif italic text-2xl sm:text-3xl text-[#062747] tracking-wide mb-1 font-semibold">
                       Mohammed Imran Sharif
@@ -444,7 +444,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
                     </p>
                   </div>
 
-                  {/* Key highlights */}
                   <div className="flex flex-wrap gap-2">
                     {['Strategic Leadership', 'Operations', 'KSA Industrial'].map((tag) => (
                       <span
@@ -455,7 +454,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, targetSection 
                       </span>
                     ))}
                   </div>
-                </div>
+                </div> */}
 
               </div>
             </div>
