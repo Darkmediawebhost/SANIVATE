@@ -673,14 +673,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ initialServiceId, init
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between text-xs text-slate-500 pt-1">
-                  <span className="font-mono text-[11px] text-slate-400">
-                    27°00&apos;21.8&quot;N 49°39&apos;28.2&quot;E
-                  </span>
-                  <span className="text-[11px] font-medium text-slate-600">
-                    Al Dana Dist., Al-Jubail
-                  </span>
-                </div>
+                
 
                 <p className="text-xs text-slate-500 leading-relaxed">
                   Strategically situated in Jubail with direct access to Jubail Commercial Port, King Fahd Industrial Port, and major industrial complexes (SABIC, SADARA, SASREF).
