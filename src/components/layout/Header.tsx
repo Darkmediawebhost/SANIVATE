@@ -555,7 +555,7 @@ export const Header: React.FC<HeaderProps> = ({
                       >
                         <span>WhatsApp: {SITE_CONFIG.contact.whatsappFormatted}</span>
                       </a>
-                      <span className="text-[11px] text-slate-500">Instant Chat &amp; RFQ Support</span>
+                      {/* <span className="text-[11px] text-slate-500">Instant Chat &amp; RFQ Support</span> */}
                     </div>
                   </div>
 
@@ -565,9 +565,9 @@ export const Header: React.FC<HeaderProps> = ({
                       <a href={`tel:${SITE_CONFIG.contact.phone}`} className="hover:text-[#0798F2] font-semibold text-slate-800">
                         {SITE_CONFIG.contact.phoneFormatted}
                       </a>
-                      <a href={`tel:${SITE_CONFIG.contact.officePhone}`} className="hover:text-[#0798F2] text-slate-500">
+                      {/* <a href={`tel:${SITE_CONFIG.contact.officePhone}`} className="hover:text-[#0798F2] text-slate-500">
                         Tel: {SITE_CONFIG.contact.officePhone}
-                      </a>
+                      </a> */}
                     </div>
                   </div>
 
@@ -585,10 +585,10 @@ export const Header: React.FC<HeaderProps> = ({
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2.5">
+                  {/* <div className="flex items-center gap-2.5">
                     <Clock className="w-4 h-4 text-[#0798F2] shrink-0" />
                     <span>Sun - Thu: 8:00 AM - 6:00 PM</span>
-                  </div>
+                  </div> */}
                 </div>
 
               </div>
