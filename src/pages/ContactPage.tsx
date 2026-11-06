@@ -654,7 +654,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ initialServiceId, init
                 <div className="relative h-56 sm:h-64 rounded-2xl overflow-hidden border border-slate-200 shadow-inner bg-slate-100 group">
                   <iframe
                     title="SANIVATE Jubail Location"
-                    src={SITE_CONFIG.location.mapEmbedUrl}
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3216.8752113130713!2d49.65529247544275!3d27.006048176591747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDAwJzIxLjgiTiA0OcKwMzknMjguMyJF!5e1!3m2!1sen!2sin!4v1793943322974!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

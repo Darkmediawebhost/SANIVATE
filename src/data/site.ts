@@ -47,8 +47,8 @@ export const SITE_CONFIG: CompanyConfig = {
     country: "Kingdom of Saudi Arabia",
     fullAddress: "Unit No. 101 & 102, Building No. 3222, Al Harith Ibn Tufail St., Al Dana Dist., Al-Jubail 35514 - 9039, Eastern Province, Kingdom of Saudi Arabia",
     coordinates: { lat: 27.00605, lng: 49.65783 },
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3216.8751569449446!2d49.65525437544263!3d27.006050076591603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDAwJzIxLjgiTiA0OcKwMzknMjguMiJF!5e1!3m2!1sen!2sin!4v1793167173147!5m2!1sen!2sin",
-    googleMapsUrl: "https://maps.google.com/?q=27.006050,49.657833"
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3216.8752113130713!2d49.65529247544275!3d27.006048176591747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDAwJzIxLjgiTiA0OcKwMzknMjguMyJF!5e1!3m2!1sen!2sin!4v1793943322974!5m2!1sen!2sin",
+    googleMapsUrl: "https://maps.google.com/?q=27.006048, 49.657867"
   },
   contact: {
     email: "admin-isd@sanivate.co",
