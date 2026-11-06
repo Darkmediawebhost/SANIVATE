@@ -125,10 +125,10 @@ export const Header: React.FC<HeaderProps> = ({
       {/* 1. Top Utility Micro-Bar (Corporate Industrial Contact Strip) */}
       <div className="hidden lg:block bg-[#031A30] text-slate-300 text-xs py-2 border-b border-[#062747]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-around">
             
             {/* Left Location & Office Landline */}
-            <div className="flex items-center gap-6">
+            {/* <div className="flex items-center gap-6">
               <span className="flex items-center gap-1.5 text-slate-300">
                 <MapPin className="w-3.5 h-3.5 text-[#0798F2]" />
                 <span>Al Dana Dist., Al-Jubail, Saudi Arabia</span>
@@ -141,20 +141,11 @@ export const Header: React.FC<HeaderProps> = ({
                 <Phone className="w-3.5 h-3.5 text-[#0798F2]" />
                 <span>Tel: {SITE_CONFIG.contact.officePhone}</span>
               </a>
-            </div>
+            </div> */}
 
             {/* Right Fast Contact & Direct Line */}
             <div className="flex items-center gap-5">
-              <a 
-                href={`tel:${SITE_CONFIG.contact.phone}`} 
-                className="flex items-center gap-1.5 hover:text-[#0798F2] font-medium transition-colors"
-                title="Direct Phone"
-              >
-                <Phone className="w-3.5 h-3.5 text-[#0798F2]" />
-                <span>{SITE_CONFIG.contact.phoneFormatted}</span>
-              </a>
-              <span className="text-white/20">|</span>
-              <a 
+                <a 
                 href={SITE_CONFIG.contact.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -165,6 +156,16 @@ export const Header: React.FC<HeaderProps> = ({
                 <span>WhatsApp: {SITE_CONFIG.contact.whatsappFormatted}</span>
               </a>
               <span className="text-white/20">|</span>
+              <a 
+                href={`tel:${SITE_CONFIG.contact.phone}`} 
+                className="flex items-center gap-1.5 hover:text-[#0798F2] font-medium transition-colors"
+                title="Direct Phone"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#0798F2]" />
+                <span>{SITE_CONFIG.contact.phoneFormatted}</span>
+              </a>
+              <span className="text-white/20">|</span>
+            
               <a 
                 href={`mailto:${SITE_CONFIG.contact.email}`} 
                 className="flex items-center gap-1.5 hover:text-[#0798F2] transition-colors"
@@ -528,8 +529,19 @@ export const Header: React.FC<HeaderProps> = ({
                   </p>
                   
                   <div className="flex items-start gap-2.5">
+                    <Building2 className="w-4 h-4 text-[#0798F2] shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-slate-800 block text-[11px]">Corporate Office</span>
+                      <span className="text-[11px] text-slate-500">Unit 101, Bldg 3222, Al Dana Dist., Al-Jubail</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2.5">
                     <MapPin className="w-4 h-4 text-[#0798F2] shrink-0 mt-0.5" />
-                    <span>Unit 101 &amp; 102, Al Dana Dist., Al-Jubail, KSA</span>
+                    <div>
+                      <span className="font-semibold text-slate-800 block text-[11px]">Branch Office</span>
+                      <span className="text-[11px] text-slate-500">Unit B4, Bldg 4512, Al Safat Dist., Al-Jubail</span>
+                    </div>
                   </div>
 
                   <div className="flex items-start gap-2.5">

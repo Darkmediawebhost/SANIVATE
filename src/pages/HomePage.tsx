@@ -50,10 +50,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, targetSection })
       <ProjectShowcase onNavigate={onNavigate} />
       
       {/* Video Case Studies & Testimonials Section */}
-      <CaseStudiesSection
+      {/* <CaseStudiesSection
         onOpenCaseStudy={(study) => setSelectedCaseStudy(study)}
         onNavigateToContact={(service) => onNavigate('contact', { service })}
-      />
+      /> */}
 
       {/* 3-Row Continuous Marquee Industrial Partners Section */}
       <OurPartners onNavigate={onNavigate} />

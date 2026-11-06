@@ -6,7 +6,7 @@ export interface ServiceItem {
   fullDescription: string;
   image: string;
   iconName: "Users" | "Truck" | "Home" | "Layers" | "Recycle" | "CheckCircle2";
-  category: "manpower" | "equipment" | "camps" | "materials" | "scrap" | "wqt";
+  category: "manpower" | "equipment " | "camps" | "materials" | "scrap" | "wqt";
   scope: string[];
   capabilities: string[];
   deliverables: string[];
@@ -46,7 +46,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "equipment",
     slug: "equipment-services",
-    title: "Equipment Services",
+    title: "Equipment &  Rental Vehicle  Services",
     shortDescription: "Supply, rental and support for heavy equipment and machinery to keep industrial and construction operations moving.",
     fullDescription: "We supply a modern, certified fleet of industrial heavy equipment and construction machinery on short and long-term lease terms. Every machine undergoes rigorous third-party inspection, preventative maintenance schedules, and is supplied with licensed, certified operators where needed.",
     image: "/assets/images/service_heavy_equipment_1792910641621.jpg",

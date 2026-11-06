@@ -31,6 +31,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ initialServiceId, init
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [activeOfficeTab, setActiveOfficeTab] = useState<'corporate' | 'branch'>('corporate');
+  const selectedOffice = activeOfficeTab === 'corporate' ? SITE_CONFIG.corporateOffice : SITE_CONFIG.branchOffice;
   const [submittedData, setSubmittedData] = useState<{
     referenceId: string;
     submittedAt: string;
@@ -403,6 +405,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ initialServiceId, init
                             <option value="Dammam / Al-Khobar">Dammam / Al-Khobar</option>
                             <option value="Riyadh Region">Riyadh Region</option>
                             <option value="Neom / Red Sea Global">Neom / Red Sea Global</option>
+                            <option value="Rastanura Project & Turaif Project">Rastanura Project & Turaif Project</option>
                             <option value="Other KSA Location">Other KSA Location</option>
                           </select>
                           <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-3.5 pointer-events-none" />
@@ -419,7 +422,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ initialServiceId, init
                         {[
                           'Immediate (1-2 wks)',
                           'Next Month',
-                          'Q2 / Q3 2026',
+                          'Q1 / Q2 2027',
                           'Plant Turnaround'
                         ].map((timeOption) => (
                           <button
@@ -520,28 +523,51 @@ export const ContactPage: React.FC<ContactPageProps> = ({ initialServiceId, init
               <div className="bg-[#062747] text-white rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
                 <div>
                   <span className="text-xs font-bold uppercase tracking-widest text-[#0798F2]">
-                    HEADQUARTERS
+                    OFFICES &amp; OPERATIONS
                   </span>
                   <h3 className="text-xl font-extrabold mt-1 text-white">
-                    Jubail Operations Hub
+                    Jubail Operations Hubs
                   </h3>
                   <p className="text-xs text-slate-300 mt-1">
-                    Strategically positioned in Saudi Arabia&apos;s primary industrial corridor.
+                    Strategically positioned across Jubail&apos;s key industrial and business districts.
                   </p>
                 </div>
 
                 <div className="space-y-4 text-sm">
+                  {/* Corporate Office */}
+                  <div className="flex items-start gap-3">
+                    <Building2 className="w-5 h-5 text-[#0798F2] shrink-0 mt-0.5" />
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <p className="font-semibold text-white">Corporate Office</p>
+                        {/* <span className="text-[10px] bg-[#0798F2]/20 text-[#0798F2] px-2 py-0.5 rounded font-bold uppercase">HQ</span> */}
+                      </div>
+                      <a
+                        href={SITE_CONFIG.corporateOffice.googleMapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate-300 text-xs leading-relaxed hover:text-[#0798F2] transition-colors block mt-1"
+                      >
+                        {SITE_CONFIG.corporateOffice.fullAddress}
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Branch Office */}
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-[#0798F2] shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-semibold text-white">Main Office</p>
+                      <div className="flex items-center gap-2">
+                        <p className="font-semibold text-white">Branch Office</p>
+                        {/* <span className="text-[10px] bg-slate-700/80 text-slate-300 px-2 py-0.5 rounded font-medium uppercase">Branch</span> */}
+                      </div>
                       <a
-                        href={SITE_CONFIG.location.googleMapsUrl}
+                        href={SITE_CONFIG.branchOffice.googleMapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-300 text-xs leading-relaxed hover:text-[#0798F2] transition-colors block mt-0.5"
+                        className="text-slate-300 text-xs leading-relaxed hover:text-[#0798F2] transition-colors block mt-1"
                       >
-                        {SITE_CONFIG.location.fullAddress}
+                        {SITE_CONFIG.branchOffice.fullAddress}
                       </a>
                     </div>
                   </div>
@@ -585,7 +611,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ initialServiceId, init
                             <span className="text-[10px] bg-[#25D366]/20 text-[#25D366] px-1.5 py-0.5 rounded border border-[#25D366]/30">Chat Live</span>
                           </a>
                         </div>
-                        <p className="text-[11px] text-slate-400">Available 24/7 for urgent RFQs &amp; crew mobilization</p>
+                        {/* <p className="text-[11px] text-slate-400">Available 24/7 for urgent RFQs &amp; crew mobilization</p> */}
                       </div>
                     </div>
                   </div>
@@ -596,22 +622,22 @@ export const ContactPage: React.FC<ContactPageProps> = ({ initialServiceId, init
                       <p className="font-semibold text-white">Direct &amp; Corporate Lines</p>
                       <div className="flex flex-col gap-1 mt-0.5 text-xs text-slate-300">
                         <div className="flex items-center gap-2">
-                          <span className="text-slate-400">Mobile:</span>
+                          {/* <span className="text-slate-400">Mobile:</span> */}
                           <a href={`tel:${SITE_CONFIG.contact.phone}`} className="text-[#0798F2] hover:underline font-semibold">
                             {SITE_CONFIG.contact.phoneFormatted}
                           </a>
                         </div>
-                        <div className="flex items-center gap-2">
+                        {/* <div className="flex items-center gap-2">
                           <span className="text-slate-400">Landline:</span>
                           <a href={`tel:${SITE_CONFIG.contact.officePhone}`} className="hover:text-white">
                             {SITE_CONFIG.contact.officePhone}
                           </a>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3">
+                  {/* <div className="flex items-center gap-3">
                     <Clock className="w-5 h-5 text-[#0798F2] shrink-0" />
                     <div>
                       <p className="font-semibold text-white">Operations Hours</p>
@@ -619,42 +645,69 @@ export const ContactPage: React.FC<ContactPageProps> = ({ initialServiceId, init
                         {SITE_CONFIG.contact.workDays} • {SITE_CONFIG.contact.workingHours}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
-                <div className="p-4 rounded-xl bg-white/10 border border-white/10 text-xs text-slate-300">
+                {/* <div className="p-4 rounded-xl bg-white/10 border border-white/10 text-xs text-slate-300">
                   <p className="font-semibold text-white mb-1">Aramco &amp; Vendor Registrations</p>
                   <p className="text-[11px] leading-relaxed">
                     Commercial Registration (CR) &amp; Vendor dossiers available upon request for qualification committees.
                   </p>
-                </div>
+                </div> */}
               </div>
 
-              {/* Interactive Google Map for Jubail Location */}
+              {/* Interactive Google Map for Jubail Locations */}
               <div className="bg-white rounded-3xl p-6 border border-[#E4EDF5] shadow-sm space-y-4">
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="flex items-center gap-2">
                     <Building2 className="w-4 h-4 text-[#0798F2]" />
                     <span className="text-sm font-bold text-[#062747]">
-                      Jubail Operations Location
+                Location
                     </span>
                   </div>
-                  <a
-                    href={SITE_CONFIG.location.googleMapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#0798F2] hover:text-[#062747] transition-colors"
-                  >
-                    <span>Open in Maps</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
+                  <div className="flex items-center gap-2">
+                    {/* <div className="inline-flex rounded-lg bg-slate-100 p-0.5">
+                      <button
+                        type="button"
+                        onClick={() => setActiveOfficeTab('corporate')}
+                        className={`px-2.5 py-1 text-xs font-semibold rounded-md transition-colors ${
+                          activeOfficeTab === 'corporate'
+                            ? 'bg-white text-[#062747] shadow-xs'
+                            : 'text-slate-600 hover:text-[#062747]'
+                        }`}
+                      >
+                        Corporate
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setActiveOfficeTab('branch')}
+                        className={`px-2.5 py-1 text-xs font-semibold rounded-md transition-colors ${
+                          activeOfficeTab === 'branch'
+                            ? 'bg-white text-[#062747] shadow-xs'
+                            : 'text-slate-600 hover:text-[#062747]'
+                        }`}
+                      >
+                        Branch
+                      </button>
+                    </div> */}
+                    <a
+                      href={selectedOffice.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#0798F2] hover:text-[#062747] transition-colors ml-1"
+                    >
+                      <span>Open in Maps</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
                 </div>
 
                 {/* Live Google Map Embed */}
                 <div className="relative h-56 sm:h-64 rounded-2xl overflow-hidden border border-slate-200 shadow-inner bg-slate-100 group">
                   <iframe
-                    title="SANIVATE Jubail Location"
-                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3216.8752113130713!2d49.65529247544275!3d27.006048176591747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDAwJzIxLjgiTiA0OcKwMzknMjguMyJF!5e1!3m2!1sen!2sin!4v1793943322974!5m2!1sen!2sin"
+                    key={activeOfficeTab}
+                    title={`SANIVATE ${selectedOffice.name}`}
+                    src={selectedOffice.mapEmbedUrl}
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -665,19 +718,22 @@ export const ContactPage: React.FC<ContactPageProps> = ({ initialServiceId, init
                   />
 
                   {/* Location badge overlay */}
-                  <div className="absolute bottom-3 left-3 pointer-events-none bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-200 shadow-md flex items-center gap-2">
+                  {/* <div className="absolute bottom-3 left-3 pointer-events-none bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-200 shadow-md flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-[#0798F2] animate-pulse" />
                     <span className="text-[11px] font-bold text-[#062747]">
-                      SANIVATE • Al Dana, Jubail
+                      SANIVATE • {selectedOffice.name} ({selectedOffice.district}, Jubail)
                     </span>
-                  </div>
+                  </div> */}
                 </div>
 
-                
-
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  Strategically situated in Jubail with direct access to Jubail Commercial Port, King Fahd Industrial Port, and major industrial complexes (SABIC, SADARA, SASREF).
-                </p>
+                {/* <div className="text-xs text-slate-500 space-y-1">
+                  <p className="font-medium text-slate-700">
+                    {selectedOffice.fullAddress}
+                  </p>
+                  <p className="leading-relaxed text-[11px]">
+                    Strategically situated in Jubail with direct access to Jubail Commercial Port, King Fahd Industrial Port, and major industrial complexes (SABIC, SADARA, SASREF).
+                  </p>
+                </div> */}
               </div>
 
               {/* Corporate Presence & Licensing Card */}

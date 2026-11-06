@@ -18,7 +18,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-[#E4EDF5]">
           
           {/* Col 1: Brand & Bio (4 cols) */}
-            <div className="lg:col-span-4 space-y-4">
+            <div className="lg:col-span-6 space-y-4">
               <div className="flex items-center gap-4">
                 <button
                   onClick={() => onNavigate('home')}
@@ -58,7 +58,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
               >
                 <WhatsAppIcon className="w-4 h-4 fill-current" />
               </a>
-              <a
+              {/* <a
                 href={SITE_CONFIG.socials.linkedin}
                 target="_blank"
                 rel="noreferrer"
@@ -110,12 +110,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
                 >
                   <Youtube className="w-4 h-4" />
                 </a>
-              )}
+              )} */}
             </div>
           </div>
 
           {/* Col 2: Quick Links (2 cols) */}
-          <div className="lg:col-span-2 space-y-3">
+          {/* <div className="lg:col-span-2 space-y-3">
             <h3 className="text-sm font-bold text-[#062747] uppercase tracking-wider">
               Quick Links
             </h3>
@@ -177,7 +177,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
                 </button>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Col 3: Our Services (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
@@ -203,18 +203,34 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
             <h3 className="text-sm font-bold text-[#062747] uppercase tracking-wider">
               Contact Us
             </h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3.5 text-sm">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#0798F2] shrink-0 mt-0.5" />
-                <a
-                  href={SITE_CONFIG.location.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#0798F2] transition-colors"
-                >
-                  {SITE_CONFIG.location.fullAddress}
-                </a>
+                <div className="text-xs">
+                  <a
+                    href={SITE_CONFIG.corporateOffice.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#0798F2] transition-colors leading-relaxed block text-slate-600"
+                  >
+                    {SITE_CONFIG.corporateOffice.fullAddress}
+                  </a>
+                </div>
               </li>
+              {/* <li className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-[#0798F2] shrink-0 mt-0.5" />
+                <div className="text-xs">
+                  <span className="font-bold text-[#062747] block mb-0.5 uppercase tracking-wider text-[11px]">Branch Office</span>
+                  <a
+                    href={SITE_CONFIG.branchOffice.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#0798F2] transition-colors leading-relaxed block text-slate-600"
+                  >
+                    {SITE_CONFIG.branchOffice.fullAddress}
+                  </a>
+                </div>
+              </li> */}
               <li className="flex items-start gap-2.5">
                 <Mail className="w-4 h-4 text-[#0798F2] shrink-0 mt-0.5" />
                 <div className="flex flex-col gap-1">
@@ -239,7 +255,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
                   >
                     WhatsApp: {SITE_CONFIG.contact.whatsappFormatted}
                   </a>
-                  <span className="text-[11px] text-slate-400">24/7 Rapid Response</span>
+                  {/* <span className="text-[11px] text-slate-400">24/7 Rapid Response</span> */}
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
@@ -249,14 +265,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
                     {SITE_CONFIG.contact.phoneFormatted}
                   </a>
                   <a href={`tel:${SITE_CONFIG.contact.officePhone}`} className="hover:text-[#0798F2] transition-colors text-slate-500">
-                    Tel: {SITE_CONFIG.contact.officePhone}
+                    {/* Tel: {SITE_CONFIG.contact.officePhone} */}
                   </a>
                 </div>
               </li>
-              <li className="flex items-center gap-2.5 text-xs text-slate-500">
+              {/* <li className="flex items-center gap-2.5 text-xs text-slate-500">
                 <Clock className="w-4 h-4 text-[#0798F2] shrink-0" />
                 <span>Sun - Thu 8:00 AM - 6:00 PM</span>
-              </li>
+              </li> */}
             </ul>
           </div>
 
