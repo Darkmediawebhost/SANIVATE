@@ -213,7 +213,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
                     rel="noopener noreferrer"
                     className="hover:text-[#0798F2] transition-colors leading-relaxed block text-slate-600"
                   >
-                    {SITE_CONFIG.corporateOffice.fullAddress}
+                   Unit No. B4, Building No. 4512, Omar Ibn Abdulaziz St., Al Safat Dist., Al-Jubail &ensp;  &ensp; 35514-7809, Eastern Province, Kingdom of Saudi Arabia
                   </a>
                 </div>
               </li>
