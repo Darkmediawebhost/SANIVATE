@@ -1,0 +1,21 @@
+{
+  "name": "SANIVATE",
+  "short_name": "SANIVATE",
+  "description": "Industrial manpower, equipment and support services in Saudi Arabia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#031A30",
+  "theme_color": "#031A30",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
