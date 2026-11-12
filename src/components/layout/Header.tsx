@@ -337,13 +337,15 @@ export const Header: React.FC<HeaderProps> = ({
               </a> */}
 
               {/* Primary CTA: Request a Quote (Hidden on mobile screens, visible from sm/tablet upwards) */}
-              <button
-                onClick={() => handleLinkClick('contact')}
+              <a
+                href="https://sanivate.co/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-xs sm:text-sm font-bold text-white bg-[#0798F2] hover:bg-[#0584d4] rounded-xl shadow-xs transition-all duration-200 whitespace-nowrap active:scale-[0.98] cursor-pointer"
               >
-                <span>Request a Quote</span>
+                <span>Corporate Website</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-              </button>
+              </a>
 
               {/* Mobile Hamburger Menu Toggle Button */}
               <button
@@ -493,34 +495,17 @@ export const Header: React.FC<HeaderProps> = ({
                 </nav>
 
 
-  <div className="p-4 rounded-2xl bg-gradient-to-r from-[#062747] to-[#041D35] text-white shadow-lg space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#0798F2]">
-                      Direct Contractor Hub
-                    </span>
-                    <span className="text-[10px] bg-white/10 px-2 py-0.5 rounded text-white">
-                      Jubail, KSA
-                    </span>
-                  </div>
-                  <p className="text-xs text-slate-300">
-                    Need instant manpower rates or crane availability?
-                  </p>
-                  <div className="grid grid-cols-2 gap-2 pt-1">
-                    <button
-                      onClick={() => handleLinkClick('contact')}
-                      className="w-full py-2 px-3 rounded-lg bg-[#0798F2] text-white text-xs font-bold flex items-center justify-center gap-1 shadow-sm"
-                    >
-                      <span>Get Quote</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
-                    <a
-                      href={`tel:${SITE_CONFIG.contact.phone}`}
-                      className="w-full py-2 px-3 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center justify-center gap-1 border border-white/10"
-                    >
-                      <Phone className="w-3 h-3 text-[#0798F2]" />
-                      <span>Call Now</span>
-                    </a>
-                  </div>
+                {/* Corporate Website CTA in Drawer */}
+                <div className="pt-2">
+                  <a
+                    href="https://sanivate.co/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group w-full flex items-center justify-center gap-2 py-3 px-4 text-sm font-bold text-white bg-[#0798F2] hover:bg-[#0584d4] rounded-xl shadow-xs transition-all duration-200 whitespace-nowrap active:scale-[0.98] cursor-pointer"
+                  >
+                    <span>Corporate Website</span>
+                    <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                  </a>
                 </div>
                 {/* Office Contact Info in Drawer */}
                 <div className="pt-4 border-t border-slate-100 space-y-3 text-xs text-slate-600">
